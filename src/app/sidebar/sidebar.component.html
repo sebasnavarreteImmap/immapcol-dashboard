@@ -5,7 +5,7 @@
             <div class="logo-img">
                 <img src="/assets/img/immap_brand_white.png"/>
             </div>
-            IMMAP
+            <span *ngIf="sidebarVisible">IMMAP</span>
         </a>
     </div>
     <ul class="nav responsive-nav">        
@@ -13,8 +13,13 @@
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
             <a  [routerLink]="[menuItem.path]">
                 <i class="{{menuItem.icon}}"></i>
-                <p>{{menuItem.title}}</p>
+                <p *ngIf="sidebarVisible">{{menuItem.title}}</p>
             </a>
         </li>
+        <span (click)="sidebarToggle()" class="btn-toggle-sidebar">
+                <i *ngIf="sidebarVisible" class="pe-7s-angle-left-circle"></i>
+                <i *ngIf="!sidebarVisible" class="pe-7s-angle-right-circle"></i>
+        </span>
     </ul>
+    
 </div>
