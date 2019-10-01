@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+      <div class="row">
+          <div class="col-md-2 col-md-offset-2">
+              <button type="button" (click)="filterValue.type =''" 
+              [ngClass]="{'btn btn-default btn-block': true, 'btn-fill': filterValue.type ==''}" >Todos</button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" (click)="filterValue.type ='map-prod'" 
+              [ngClass]="{'btn btn-default btn-block': true, 'btn-fill': filterValue.type =='map-prod'}">Mapas</button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" (click)="filterValue.type ='infographic-prod'" 
+              [ngClass]="{'btn btn-default btn-block': true, 'btn-fill': filterValue.type =='infographic-prod'}">Infografías</button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" (click)="filterValue.type ='doc-prod'" 
+              [ngClass]="{'btn btn-default btn-block': true, 'btn-fill': filterValue.type =='doc-prod'}">Documentos</button>
+          </div>
+      </div>
+
+        <div class="grid-container">
+            <div class="row">
+                <div [@zoomIn]="zoomIn" [@zoomOut]="zoomOut" class="prod col-md-3 {{product.type}}" *ngFor="let product of products | filterBy: filterValue">
+                  <div class="card">
+                      <div class=header>
+                        <h4 class="title">{{product.name}}</h4>
+                        <p class="category">Enlace</p>
+                      </div>
+                      <div class=content>                            
+                            <img src="../../assets/img/portfolio/{{product.img}}" class="img-responsive" alt="{{product.name}}">
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

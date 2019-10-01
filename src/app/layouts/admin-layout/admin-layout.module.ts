@@ -5,18 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LbdModule } from '../../lbd/lbd.module';
 import { NguiMapModule} from '@ngui/map';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-import { HomeComponent } from '../../home/home.component';
-import { UserComponent } from '../../user/user.component';
-import { TablesComponent } from '../../tables/tables.component';
-import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
-import { UpgradeComponent } from '../../upgrade/upgrade.component';
-
+import { ImmapHomeComponent } from '../../immap-home/immap-home.component';
+import { ImmapFbDashboardComponent } from '../../immap-fb-dashboard/immap-fb-dashboard.component';
+import { ImmapProductsComponent } from '../../immap-products/immap-products.component';
 
 @NgModule({
   imports: [
@@ -24,17 +19,13 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
     LbdModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'}),
+    FilterPipeModule,
   ],
   declarations: [
-    HomeComponent,
-    UserComponent,
-    TablesComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent
+    ImmapHomeComponent,
+    ImmapFbDashboardComponent,
+    ImmapProductsComponent,
   ]
 })
 

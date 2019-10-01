@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit{
     private sidebarVisible: boolean;
 
     constructor(location: Location,  private element: ElementRef) {
-      this.location = location;
+        this.location = location;
           this.sidebarVisible = false;
     }
 
@@ -24,6 +24,9 @@ export class NavbarComponent implements OnInit{
       const navbar: HTMLElement = this.element.nativeElement;
       this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
     }
+
+    
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const body = document.getElementsByTagName('body')[0];
