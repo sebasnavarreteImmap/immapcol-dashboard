@@ -1,0 +1,7 @@
+.immap-fb-grid {
+  display: flex;
+  align-items: center;
+  margin-top: 15px; }
+
+.immap-fb-grid .btn, .immap-fb-grid i {
+  font-size: xx-large; }
