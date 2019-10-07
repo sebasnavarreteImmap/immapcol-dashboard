@@ -1,9 +1,21 @@
-.immap-fb-grid{
-    display: flex;
-    align-items: center;
-    margin-top: 15px;    
+.immap-fb-grid {
+  position: relative;
+    overflow-x: hidden;
 }
 
-.immap-fb-grid .btn, .immap-fb-grid i{
-    font-size: xx-large;  
+.immap-fb-grid .btn, .immap-fb-grid i {
+  font-size: xx-large;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.nomargin {
+  margin: 0 !important;
+}
+.btn-info-fb{
+    position: fixed;
+    right: -5px;
+    top: 5vh;
 }
