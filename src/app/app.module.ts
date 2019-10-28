@@ -13,6 +13,7 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     NavbarModule,
     FooterModule,
     SidebarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GtagModule.forRoot({ trackingId: 'UA-150766517-1', trackPageviews: true })
   ],
   declarations: [
     AppComponent,

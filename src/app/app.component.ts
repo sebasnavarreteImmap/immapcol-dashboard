@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+import { Gtag } from 'angular-gtag';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-     constructor(public location: Location) {}
+     constructor(public location: Location, gtag: Gtag) {}
 
     ngOnInit(){
     }

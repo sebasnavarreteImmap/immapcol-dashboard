@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Gtag } from 'angular-gtag';
 
 @Component({
   selector: 'app-immap-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImmapHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(gtag: Gtag) { }
 
   ngOnInit() {
   }

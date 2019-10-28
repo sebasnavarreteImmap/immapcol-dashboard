@@ -3,6 +3,7 @@ import { trigger, state, style, animate, transition, useAnimation } from '@angul
 import { zoomIn, zoomOut } from 'ngx-animate';
 
 import { products } from '../../assets/products';
+import { Gtag } from 'angular-gtag';
 
 @Component({
   selector: 'app-immap-products',
@@ -23,7 +24,7 @@ export class ImmapProductsComponent implements OnInit, AfterViewInit {
   zoomIn:any;
   zoomOut:any;
 
-  constructor() { }
+  constructor(gtag: Gtag) { }
 
   ngOnInit() {
   }
