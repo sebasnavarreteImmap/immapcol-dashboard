@@ -1,0 +1,48 @@
+
+.main-slider h1.color,
+#nav ul > li > a:hover,
+.main-slider h1 .color,
+.project-rating .title.color,
+#nav ul > li.anchor-active > a,
+.contact-sec .address-list a:hover,
+.team-sec .team-col .title a:hover ,
+.service-sec .service-list h4 a:hover,
+.nav-holder .footer .copyright p a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li.anchor-active > a,
+.navbar-default .navbar-nav > li > a.anchor-active,
+#wrapper.version-iii #header.fixed-position .navbar-default .navbar-nav > li > a:hover{
+	color: #f56a6d;
+}
+
+.btn2,
+.btn:hover,
+.loader > div,
+.main-header h2:before,
+#back-top.active:hover,
+.next-section:hover .divider,
+.main-slider .caption2 .border,
+#header.style1 .nav-opener:hover span,
+#header.style1 .nav-opener:hover:after,
+#header.style1 .nav-opener:hover:before,
+.contact-sec .contact-form .sub-btn:hover,
+.service-sec.style1 .service-list li:hover .icon {
+	background: #f56a6d;
+}
+
+.btn2,
+.btn:hover,
+.loader > div,
+.portfolio-sec .filter-list .active a,
+.portfolio-sec .filter-list a:hover,
+.contact-sec .contact-form .sub-btn {
+	border-color: #f56a6d;
+}
+
+#portfolio-holder .col:before,
+.main-slider.bg-clr .slick-slide::before {
+	background: rgba(221, 37, 88, 0.8);
+}
