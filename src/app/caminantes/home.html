@@ -308,9 +308,9 @@
 					
 					<div class="container">
 							<div class="row">
-								<div class="col-md-8">
-									<div id="columnchart_material" style="height: 500px;"></div>
-								</div>
+									<div class="col-md-8">
+											<div id="columnchart_material" style="height: 500px;"></div>
+										</div>
 								<div class="col-md-4">
 									<div class="container-fluid">
 										<div class="row">
@@ -644,20 +644,23 @@
 					
 					<div class="container">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-md-12">
 									<div id="columnchart_poblacion" style="height: 500px;"></div>
 								</div>
-								<div class="col-md-4">
-									<div class="container-fluid">
-										<div class="row">
+							</div>
+							<div class="row margin-top-15">
+								<div class="col-md-10 col-md-offset-1">
+									<div class="container-fluid bordered-bottom">
+											<div class="col-md-6">
 											<p>
-												Se observa un incremento en la proporción de mujeres, de madres lactantes y gestantes y adultos mayores de 34 años.</p>
-										</div>
-										
-										<div class="row">
+												Se observa un incremento en la proporción de mujeres, 
+												de madres lactantes y gestantes y adultos mayores de 34 años.</p>
+											</div>
+											<div class="col-md-6">
 											<p>
-												La atención de PMA prioriza a las mujeres. El conteo de gestantes beneficiarias obtenido de PMA no es comparable con las encuestas.</p>
-										</div>
+												La atención de PMA prioriza a las mujeres. 
+												El conteo de gestantes beneficiarias obtenido de PMA no es comparable con las encuestas.</p>
+											</div>
 									</div>
 								</div>
 							</div>
@@ -874,121 +877,114 @@
 						</header>
 					</div>
 					<div class="row">
-						<ul class="nav nav-tabs tabs_necesidades" id="myTab" role="tablist">
-						  <li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+						<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+						  <li class="active">
+							<a id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
 								<i class=" fa fa-exclamation-triangle"></i> Necesidades mas Urgentes</a>
 						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+						  <li class="nav-item" onclick="drawRobo(); drawDonde(); drawSISeguro();drawNOSeguro();">
+							<a id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
 							  aria-selected="false">Protección</a>
 						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+						  <li class="nav-item" onclick="drawPerception(); drawDisease();">
+							<a id="health-tab" data-toggle="tab" href="#health" role="tab" aria-controls="health"
 							  aria-selected="false">Salud</a>
 						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="san-tab" data-toggle="tab" href="#san" role="tab" aria-controls="san"
+						  <li class="nav-item" onclick="drawSANA(); drawSANB(); drawSANC(); drawSAND();">
+							<a id="san-tab" data-toggle="tab" href="#san" role="tab" aria-controls="san"
 							  aria-selected="false">SAN</a>
 						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="washt-tab" data-toggle="tab" href="#wash" role="tab" aria-controls="wash"
+						  <li class="nav-item" onclick="drawWash();">
+							<a id="washt-tab" data-toggle="tab" href="#wash" role="tab" aria-controls="wash"
 							  aria-selected="false">WASH</a>
 						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="albergue-tab" data-toggle="tab" href="#albergues" role="tab" aria-controls="albergues"
+						  <li class="nav-item" onclick="drawSHELTERA(); drawSHELTERB();">
+							<a id="albergue-tab" data-toggle="tab" href="#albergues" role="tab" aria-controls="albergues"
 							  aria-selected="false">Albergues</a>
 						  </li>
 						</ul>
 						<div class="tab-content" id="myTabContent">
-						  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-							  <div class="container">
-							  	<div class="row">
+						  <div class="tab-pane fade in active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							  	<div class="row margin-top-15">
 									<div class="col-md-6">
-										<div id="chart_divnecesidades"></div>	
+										<div id="chart_divnecesidades" style="height: 400px;"></div>	
 									</div>
 									<div class="col-md-6">
-										<div id="chart_divotrasnecesidades"></div>
+										<div id="chart_divotrasnecesidades" style="height: 400px;"></div>
 									</div>
 								</div>
-							  </div>
 						  </div>
 						  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-							
-							<div class="container" style="position: relative; top: -180px;">
-								<div class="row">
-									<div class="col-md-4"><div id="chart_robo" style="height: 400px;"></div></div>
-									<div class="col-md-4"><div id="chart_donde" style="height: 400px;"></div></div>
-									<div class="col-md-4">
-										<div id="piechart"></div>
-										<div id="piechart1"></div>
-									</div>
-								</div>
-							</div>
-						  </div>
-						  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-							  
-							  <div class="container-fluid" style="position: relative; top: -180px;">
-								<div class="row">
+								<div class="row margin-top-15">
 									<div class="col-md-6">
-										<div id="chart_salud1"></div>
+										<div id="chart_robo" style="height: 260px;"></div>
+									</div>
+									<div class="col-md-6">
+											<div id="chart_donde" style="height: 260px;"></div>
+										</div>
+									<div class="col-md-6">
+										<div id="piechart" style="height: 300px;"></div>
+									</div>
+									<div class="col-md-6">
+											<div id="piechart1" style="height: 300px;"></div>
+										</div>
+								</div>
+						  </div>
+						  <div class="tab-pane fade" id="health" role="tabpanel" aria-labelledby="health-tab">
+								<div class="row margin-top-15">
+									<div class="col-md-6">
+										<div id="chart_salud1" style="height: 400px;"></div>
 										<p>Las condiciones generales de salud han mejorado al mostrar cambios significativos en la percepción de estado regular (44% a 37%) y en buen estado (32% a 52%).</p>
 									</div>
 									<div class="col-md-6">
-										<div id="chart_salud2"></div>
+										<div id="chart_salud2" style="height: 400px;"></div>
 										<p>La enfermedad con mayor incidencia es el Asma al representar el 13% de la población. Esto supone un riesgo en la ruta por el Páramo de Berlín.</p>
 									</div>
-								</div>
-							</div>
-							
+								</div>							
 						  </div>
 						  <div class="tab-pane fade" id="san" role="tabpanel" aria-labelledby="san-tab">
-							  <div class="container-fluid" style="position: relative; top: -180px;">
-								<div class="row">
+								<div class="row margin-top-15">
 									<div class="col-md-6">
-										<div id="chart_san1"></div>
-										<p>Se observa un crecimiento en la proporción de caminantes que consumen los diversos grupos de alimentos y una marcada reducción en el consumo de azúcares (gaseosas y bebidas artificiales). <br>La base de la alimentación continúan los cereales.</p>
+										<div id="chart_san1" style="height: 220px;"></div>
+										<p>Se observa un crecimiento en la proporción de caminantes que consumen los diversos grupos de alimentos y una marcada reducción en el consumo de azúcares (gaseosas y bebidas artificiales). La base de la alimentación continúan los cereales.</p>
 									</div>
 									<div class="col-md-6">
-										<div id="chart_san2"></div>
+										<div id="chart_san2" style="height: 220px;"></div>
 										<p>Un 79% de los caminantes consumen menos de 5 grupos alimentarios. A pesar de consumir diversos grupos, puede existir falta de variedad en estos.</p>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div id="chart_san3"></div>
-										<p>Menos del 40% de los caminantes consumen todos los días de la semana desayuno, almuerzo y cena. Cerca de un 12% de ellos deja de consumir alguna de estas comidas.<br><br>Se confirma que existen deficiencias en cuanto a la frecuencia del consumo de alimentos y su variedad.</p>
+										<p>Menos del 40% de los caminantes consumen todos los días de la semana desayuno, almuerzo y cena. Cerca de un 12% de ellos deja de consumir alguna de estas comidas. Se confirma que existen deficiencias en cuanto a la frecuencia del consumo de alimentos y su variedad.</p>
 									</div>
 									<div class="col-md-6">
 										<div id="chart_san4"></div>
 										<p>La mayor brecha en consumo de alimentos se produce entre hombres y mujeres en el consumo de almuerzos.</p>
 									</div>
 								</div>
-							</div>
 						  </div>
 						  <div class="tab-pane fade" id="wash" role="tabpanel" aria-labelledby="wash-tab">
-                            <div class="row" style="position: relative; top:-180px;">
-									<div class="col-md-8">
-										<div id="chart_wash" style="width:100%; height:400px;"></div>
+                            <div class="row margin-top-15">
+									<div class="col-md-12">
+										<div id="chart_wash" style="height:450px;"></div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-10 col-md-offset-1 margin-top-15">
 										<p>Se observa una mayor respuesta a las necesidades de WASH debido a al aumento en el acceso a duchas, elementos de higiene y agua potable.</p>
 									</div>
-								</div>
+							</div>
 						  </div>
 						  <div class="tab-pane fade" id="albergues" role="tabpanel" aria-labelledby="albergue-tab">
-							  
-							  <div class="row" style="position: relative; top:-180px;">
+							  <div class="row margin-top-15">
 									<div class="col-md-6">
-										<div id="chart_shelter1" style="width:100%; height:400px;"></div>
-										<p>Se observa una marcada reducción de la población que pernocta en las calles, y un incremento significativo en el arriendo de lugares como hostales y habitaciones.</p>
-									</div>
-									<div class="col-md-6">
-										<div id="chart_shelter2" style="width:100%; height:400px;"></div>
-										<p>La cobertura de los albergues sólo cobija al 31% de los caminantes.</p>
-									</div>
-								</div>
-							
+											<div id="chart_shelter1" style="height:400px;"></div>
+											<p class="margin-top-15">Se observa una marcada reducción de la población que pernocta en las calles, y un incremento significativo en el arriendo de lugares como hostales y habitaciones.</p>
+										</div>
+										<div class="col-md-6">
+											<div id="chart_shelter2" style="height:400px;"></div>
+											<p class="margin-top-15">La cobertura de los albergues sólo cobija al 31% de los caminantes.</p>
+										</div>
+							  </div>							
 						  </div>
 						</div>
 					</div>
@@ -1062,6 +1058,9 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<!-- Modal-->
 	<script>
+	$(function () {
+		$('[data-toggle="popover"]').popover()
+	})
 		// Get the modal
 		var llamar_modal=function(idmodal, idimg, idimgmodal)
 		{
@@ -1089,42 +1088,44 @@
 	</script>
 	<!-- Columnas-->	
 	<script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['corechart']});
+	  google.charts.setOnLoadCallback(drawChart);
+	  
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Motivo', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', {type: 'string', role: 'annotation'}],
-          ['Razones Económicas', 90, 74, '%' ],
-          ['Necesidades Insatisfechas', 58, 73, '%' ],
-          ['Empleo', 88, 68, '%'],
-          ['Seguridad', 58, 34,'%']
+          ['Motivo', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Razones Económicas', 0.90, 0.74],
+          ['Necesidades Insatisfechas', 0.58, 0.73],
+          ['Empleo', 0.88, 0.68],
+          ['Seguridad', 0.58, 0.34]
         ]);
 
         var options = {
           chart: {
-            title: 'Porcentaje (%)',
+            title: '',
             subtitle: '',
-          },
-		  annotations: {
-			  alwaysOutside: true,
-			  textStyle: {
-				fontSize: 12,
-				auraColor: 'none',
-				color: '#555'
-			  },
-			  boxStyle: {
-				stroke: '#ccc',
-				strokeWidth: 1,
-				gradient: {
-				  color1: '#f3e5f5',
-				  color2: '#f3e5f5',
-				  x1: '0%', y1: '0%',
-				  x2: '100%', y2: '100%'
-				}
-			  }
-			}
-			
+		  },
+		  bars: 'vertical',
+			vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 10
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
         };
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
@@ -1140,19 +1141,38 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Punto de Ingreso', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', {type: 'string', role: 'annotation'}],
-          ['Presunta Trocha', 68, 34, '%' ],
-          ['Puente Simón Bolívar', 10, 32, '%' ],
-          ['Trocha Declarada', 19, 32, '%'],
-          ['Puerto Santander', 1, 1,'%'],
-		  ['Puenté Unión', 2, 1,'%']
+          ['Punto de Ingreso', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Presunta Trocha', 0.68, 0.34],
+          ['Puente Simón Bolívar', 0.10, 0.32],
+          ['Trocha Declarada', 0.19, 0.32],
+          ['Puerto Santander', 0.01, 0.01],
+		  ['Puenté Unión', 0.02, 0.01]
         ]);
 
         var options = {
           chart: {
-            title: 'Porcentaje (%)',
+            title: '',
             subtitle: '',
-          },
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 10
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}
 			
         };
 
@@ -1168,21 +1188,39 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Documento', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', { role: 'annotationText' }],
-          ['Cédula venezolana', 95, 90, '%' ],
-          ['TMF', 9, 37, '%' ],
-          ['Pasaporte', 6, 8, '%'],
-          ['Ninguno', 2, 4,'%'],
-		  ['PEP', 0, 4,'%'],
-		  ['Cédula colombiana', 4, 3,'%']
+          ['Documento', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Cédula venezolana', 0.95, 0.90],
+          ['TMF', 0.09, 0.37],
+          ['Pasaporte', 0.06, 0.08],
+          ['Ninguno', 0.02, 0.04],
+		  ['PEP', 0.0, 0.04],
+		  ['Cédula colombiana', 0.04, 0.03]
         ]);
 
         var options = {
           chart: {
-            title: 'Porcentaje (%)',
+            title: '',
             subtitle: '',
-          }
-			
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 12
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
         };
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_documentos'));
@@ -1283,37 +1321,38 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Género', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', 'Septiembre 2019 beneficiarios PMA-CRC'],
-          ['Hombres', 57, 54, 36 ],
-          ['Mujeres', 32, 45, 64 ],
-          ['LGBTI', 1, 1, 1],
-          ['Adultos Jovenes', 67, 66,72],
-		  ['Gestantes y Lactantes', 15, 33,0]
+          ['Género', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP', 'Septiembre 2019 beneficiarios PMA-CRC'],
+          ['Hombres', 0.57, 0.54, 0.36 ],
+          ['Mujeres', 0.32, 0.45, 0.64 ],
+          ['LGBTI', 0.01, 0.01, 0.01],
+          ['Adultos Jovenes', 0.67, 0.66,0.72],
+		  ['Gestantes y Lactantes', 0.15, 0.33,0.0]
         ]);
 
         var options = {
           chart: {
-            title: 'Porcentaje (%)',
+            title: '',
             subtitle: '',
           },
-		  annotations: {
-			  alwaysOutside: true,
-			  textStyle: {
-				fontSize: 12,
-				auraColor: 'none',
-				color: '#555'
-			  },
-			  boxStyle: {
-				stroke: '#ccc',
-				strokeWidth: 1,
-				gradient: {
-				  color1: '#f3e5f5',
-				  color2: '#f3e5f5',
-				  x1: '0%', y1: '0%',
-				  x2: '100%', y2: '100%'
-				}
-			  }
-			}
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 12
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}
 			
         };
 
@@ -1422,20 +1461,39 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Quien los espera', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', {type: 'string', role: 'annotation'}],
-          ['Nadie', 51, 36, '%' ],
-          ['Familia venezolana', 28, 34, '%' ],
-          ['Amigos Venezolanos', 26, 23, '%'],
-          ['Amigos Colombianos', 5, 1,'%'],
-		  ['Familia Colombiana', 2, 3,'%'],
-		  ['Empleador', 2, 2,'%']
+          ['Quien los espera', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Nadie', 0.51, 0.36],
+          ['Familia venezolana', 0.28, 0.34],
+          ['Amigos Venezolanos', 0.26, 0.23],
+          ['Amigos Colombianos', 0.05, 0.01],
+		  ['Familia Colombiana', 0.02, 0.03],
+		  ['Empleador', 0.02, 0.02]
         ]);
 
         var options = {
           chart: {
             title: 'Quién espera a los caminantes en su lugar de destino',
-            subtitle: 'Porcentaje (%)',
-          },			
+            subtitle: '',
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 10
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
         };
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_espera'));
@@ -1450,21 +1508,39 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Quien los Acompaña', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', {type: 'string', role: 'annotation'}],
-          ['Amigos', 52, 38, '%' ],
-          ['Hijos', 10, 32, '%' ],
-          ['Pareja', 14, 28, '%'],
-          ['Otros Familiares', 22, 23,'%'],
-		  ['Solo', 16,14,'%'],
-		  ['Padre o Madre', 3, 6,'%']
+          ['Quien los Acompaña', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Amigos', 0.52, 0.38],
+          ['Hijos', 0.10, 0.32],
+          ['Pareja', 0.14, 0.28],
+          ['Otros Familiares', 0.22, 0.23],
+		  ['Solo', 0.16,0.14],
+		  ['Padre o Madre', 0.03, 0.06]
         ]);
 
         var options = {
           chart: {
             title: 'Quién acompaña a los caminantes',
-            subtitle: 'Porcentaje (%)',
-          },
-			
+            subtitle: '',
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 10
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
         };
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_acompana'));
@@ -1479,18 +1555,36 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Intención de volver a Venezuela', 'agosto 2018 - Ocha', 'Octubre 2019 iMMAP', {type: 'string', role: 'annotation'}],
-          ['Si', 86, 53, '%' ],
-          ['No', 4, 41, '%' ],
-          ['No Sabe/No Responde', 10, 6, '%']
+          ['Intención de volver a Venezuela', 'Agosto 2018 - Ocha', 'Octubre 2019 iMMAP'],
+          ['Si', 0.86, 0.53],
+          ['No', 0.04, 0.41],
+          ['No Sabe/No Responde', 0.10, 0.06]
         ]);
 
         var options = {
           chart: {
             title: 'Intención de volver a Venezuela',
-            subtitle: 'Porcentaje (%)',
-          },
-			
+            subtitle: '',
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 12
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
         };
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_migra'));
@@ -1505,19 +1599,38 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Nivel Educativo', 'Caminantes', 'Colombianos', {type: 'string', role: 'annotation'}],
-          ['Primaria', 16, 25, '%' ],
-          ['Secundaria', 38, 14, '%' ],
-          ['Media', 31, 29, '%'],
-		  ['Superior', 13, 27, '%'],
-		  ['Ninguna', 1, 5, '%']
+          ['Nivel Educativo', 'Caminantes', 'Colombianos'],
+          ['Primaria', 0.16, 0.25],
+          ['Secundaria', 0.38, 0.14],
+          ['Media', 0.31, 0.29],
+		  ['Superior', 0.13, 0.27],
+		  ['Ninguna', 0.01, 0.05]
         ]);
 
         var options = {
           chart: {
             title: 'Comparación nivel educativo de caminantes con población colombiana mayor de 18 años.',
-            subtitle: 'Porcentaje (%)',
-          },
+            subtitle: '',
+		  },
+		  vAxis: {
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 12
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'top', alignment: 'start' , orientation: 'vertical'}
 			
         };
 
@@ -1530,24 +1643,44 @@
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
 		google.charts.setOnLoadCallback(drawBasic);
+		
 
 	function drawBasic() {
-
+		var formatter = new google.visualization.NumberFormat({pattern: '#%'});
 		  var data = google.visualization.arrayToDataTable([
 			['Necesidad', 'Porcentaje',],
-			['Medios de Vida', 52],
-			['Lugar seguro para vivir', 27],
-			['Transporte', 8],
-			['Alimentación', 7],
-			['Salud', 3],
-			['Vivienda', 1],
-			['Reunificación Familiar', 1],
-			['Educación', 1]
+			['Medios de Vida', 0.52],
+			['Lugar seguro para vivir', 0.27],
+			['Transporte', 0.08],
+			['Alimentación', 0.07],
+			['Salud', 0.03],
+			['Vivienda', 0.01],
+			['Reunificación Familiar', 0.01],
+			['Educación', 0.01]
 		  ]);
+		  formatter.format(data, 1); // format column 1
 
 		  var options = {
-			title: 'Necesidades más Urgentes'
-
+			title: 'Necesidades más Urgentes',
+			vAxis: {
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad',
+					fontSize: 12
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {				
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'none', alignment: 'start' , orientation: 'vertical'}
 		  };
 
 		  var chart = new google.visualization.BarChart(document.getElementById('chart_divnecesidades'));
@@ -1561,400 +1694,646 @@
 		google.charts.setOnLoadCallback(drawBasic);
 
 	function drawBasic() {
-
+		var formatter = new google.visualization.NumberFormat({pattern: '#%'});
 		  var data = google.visualization.arrayToDataTable([
 			['Necesidad', 'Porcentaje',],
-			['Alimnetación', 51],
-			['Lugar seguro para vivir', 42],
-			['Salud', 37],
-			['Alimentación', 7],
-			['Salud', 3],
-			['Medios de Vida', 36],
-			['Vivienda', 35],
-			['Transporte', 26],
-			['Estudios', 21],
-			['Reunificación Familiar', 17],
-			['Información', 10]
+			['Alimentación', 0.51],
+			['Lugar seguro para vivir', 0.42],
+			['Salud', 0.37],
+			['Alimentación', 0.07],
+			['Salud', 0.03],
+			['Medios de Vida', 0.36],
+			['Vivienda', 0.35],
+			['Transporte', 0.26],
+			['Estudios', 0.21],
+			['Reunificación Familiar', 0.17],
+			['Información', 0.10]
 		  ]);
+		  formatter.format(data, 1); // format column 1
 
 		  var options = {
-			title: 'Otras Necesidades'
-
+			title: 'Otras Necesidades',
+			vAxis: {
+				textStyle: {
+					bold: false,
+					color: '#9ba7ad',
+					fontSize: 11
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {				
+				title:'Porcentaje',
+				format: 'percent',
+				maxValue: 1,
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'none', alignment: 'start' , orientation: 'vertical'}
 		  };
 
 		  var chart = new google.visualization.BarChart(document.getElementById('chart_divotrasnecesidades'));
 
 		  chart.draw(data, options);
 		}
+
+
 	</script>
 
 	<script type="text/javascript">
-		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBasic);
+		google.charts.load('current', {packages: ['corechart']});
+		// google.charts.setOnLoadCallback(drawRobo);
 
-	function drawBasic() {
-
+	function drawRobo() {
+		setTimeout(function(){ 
+			var formatter = new google.visualization.NumberFormat({pattern: '#%'});
 		  var data = google.visualization.arrayToDataTable([
 			['Caso', 'Porcentaje',],
-			['Robo', 19],
-			['Solicitud de Soborno (Venezuela)', 7],
-			['Amenazas o maltrato', 5],
-			['Extorción', 2],
-			['Solicitud de Soborno (Venezuela)', 1]
+			['Robo', 0.19],
+			['Solicitud de Soborno (Venezuela)', 0.07],
+			['Amenazas o maltrato', 0.05],
+			['Extorsión', 0.02],
+			['Solicitud de Soborno (Venezuela)', 0.01]
 		  ]);
+		  formatter.format(data, 1); // format column 1
 
 		  var options = {
 			title: '¿Durante su viaje ha sufrido:',
-			subtitle:'Porcentaje',
-			chartArea: {width: '50%'}
-
+			vAxis: {
+				textStyle: {
+					bold: false,
+					color: '#9ba7ad',
+					fontSize: 11
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {				
+				title:'Porcentaje',
+				format: 'percent',
+				viewWindow: {
+					min: 0,
+					max: 0.3
+				},
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'none', alignment: 'start' , orientation: 'vertical'}
 		  };
 
 		  var chart = new google.visualization.BarChart(document.getElementById('chart_robo'));
 
-		  chart.draw(data, options);
+			chart.draw(data, options)
+		}, 300);
 		}
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBasic);
+		// google.charts.setOnLoadCallback(drawBasic);
 
-	function drawBasic() {
+	function drawDonde() {
 
-		  var data = google.visualization.arrayToDataTable([
+		setTimeout(function(){
+			var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			var data = google.visualization.arrayToDataTable([
 			['Caso', 'Porcentaje',],
-			['Calles', 64],
-			['Trochas', 20],
-			['Oficinas Publicas', 9],
-			['Refugios', 4],
-			['donde Duerme', 3]
+			['Calles', 0.64],
+			['Trochas', 0.20],
+			['Oficinas Publicas', 0.09],
+			['Refugios', 0.04],
+			['donde Duerme', 0.03]
 		  ]);
+		  formatter.format(data, 1); // format column 1
 
 		  var options = {
 			title: 'Donde ha Sufrido estos casos',
-			subtitle:'Porcentaje',
-			chartArea: {width: '50%'}
-
+			vAxis: {
+				textStyle: {
+					bold: false,
+					color: '#9ba7ad',
+					fontSize: 11
+				},
+				baselineColor: '#cfd2d5',
+			},
+			hAxis: {				
+				title:'Porcentaje',
+				format: 'percent',
+				viewWindow: {
+					min: 0,
+					max: 0.8
+				},
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'none', alignment: 'start' , orientation: 'vertical'}
 		  };
 
 		  var chart = new google.visualization.BarChart(document.getElementById('chart_donde'));
 
 		  chart.draw(data, options);
+		 }, 300);
 		}
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {'packages':['corechart']});
-		  google.charts.setOnLoadCallback(drawChart);
+		//   google.charts.setOnLoadCallback(drawChart);
+		
+		  function drawSISeguro() {
+			setTimeout(function(){ 
+				var data = google.visualization.arrayToDataTable([
+				['Género', 'SI'],
+				['Hombres', 267],
+				['Mujeres', 284]
+				]);
 
-		  function drawChart() {
+				var options = {
+				title: 'SI Se siente seguro en los Albergues',
+				};
 
-			var data = google.visualization.arrayToDataTable([
-			  ['Género', 'SI'],
-			  ['Hombres', 267],
-			  ['Mujeres', 284]
-			]);
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-			var options = {
-			  title: 'SI Se siente seguro en los Albergues',
-
-			};
-
-			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-			chart.draw(data, options);
+				chart.draw(data, options);
+			}, 300);
 		  }
 
 	</script>	
 
 	<script type="text/javascript">
 		google.charts.load('current', {'packages':['corechart']});
-		  google.charts.setOnLoadCallback(drawChart);
+		//   google.charts.setOnLoadCallback(drawChart);
 
-		  function drawChart() {
+		  function drawNOSeguro() {
+			setTimeout(function(){ 
+				var data = google.visualization.arrayToDataTable([
+				['Género', 'NO'],
+				['Hombres', 194],
+				['Mujeres', 134]
+				]);
 
-			var data = google.visualization.arrayToDataTable([
-			  ['Género', 'NO'],
-			  ['Hombres', 194],
-			  ['Mujeres', 134]
-			]);
+				var options = {
+				title: 'NO Se siente seguro en los Albergues',
+				};
 
-			var options = {
-			  title: 'NO Se siente seguro en los Albergues',
+				var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
 
-			};
-
-			var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-
-			chart.draw(data, options);
+				chart.draw(data, options);
+			 }, 300);
 		  }
 
 	</script>
 
 	<script type="text/javascript">
-		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBasic);
+		google.charts.load('current', {packages: ['corechart']});
+		// google.charts.setOnLoadCallback(drawBasic);
 
-	function drawBasic() {
+	function drawPerception() {
+		setTimeout(function(){
+			var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			var data = google.visualization.arrayToDataTable([
+				['Percepción', 'Agosto 2018 - OCHA', 'Octubre 2019 - iMMAP'],
+				['Muy Mala', 0.05, 0.02],
+				['Mala ', 0.05, 0.06],
+				['Regular', 0.44, 0.37],
+				['Buena', 0.32, 0.52],
+				['Muy buena', 0.13, 0.02]
+			]);
+			formatter.format(data, 1);
+			formatter.format(data, 2); 
 
-		  var data = google.visualization.arrayToDataTable([
-			['Precepción', 'Agosto 2018 - OCHA', 'Octubre 2019 - iMMAP'],
-			['Muy Mala', 5, 2],
-			['Mala ', 5, 6],
-			['Regular', 44, 37],
-			['Buena', 32, 52],
-			['Muy buena', 13, 2]
-		  ]);
+			var options = {
+				title: 'Percepción de Salud',
+				vAxis: {
+					textStyle: {
+						bold: false,
+						color: '#9ba7ad',
+						fontSize: 11
+					},
+					baselineColor: '#cfd2d5',
+				},
+				hAxis: {				
+					title:'Porcentaje',
+					format: 'percent',
+					viewWindow: {
+						min: 0,
+						max: 0.7
+					},
+					textStyle: {
+						bold: true,
+						color: '#9ba7ad'
+					},
+					baselineColor: '#cfd2d5',
+				},
+				legend: {position: 'bottom', alignment: 'center' , orientation: 'vertical'}
+			};
 
-		  var options = {
-			title: 'Percepción de Salud',
-			subtitle:'Porcentaje',
-			chartArea: {width: '70%'}
+			var chart = new google.visualization.BarChart(document.getElementById('chart_salud1'));
 
-		  };
-
-		  var chart = new google.visualization.BarChart(document.getElementById('chart_salud1'));
-
-		  chart.draw(data, options);
+			chart.draw(data, options);
+		 }, 300);
 		}
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBasic);
+		// google.charts.setOnLoadCallback(drawBasic);
 
-	function drawBasic() {
+	function drawDisease() {
+		setTimeout(function(){ 
+			var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			var data = google.visualization.arrayToDataTable([
+				['Enfermedad', 'Porcentaje'],
+				['Asma', 0.13],
+				['No Sabe ',0.04],
+				['VIH/SIDA', 0.001]
+			]);
+			formatter.format(data, 1);
+			
+			var options = {
+				title: 'Percepción de Salud',
+				vAxis: {
+					textStyle: {
+						bold: false,
+						color: '#9ba7ad',
+						fontSize: 11
+					},
+					baselineColor: '#cfd2d5',
+				},
+				hAxis: {				
+					title:'Porcentaje',
+					format: 'percent',
+					viewWindow: {
+						min: 0,
+						max: 0.2
+					},
+					textStyle: {
+						bold: true,
+						color: '#9ba7ad'
+					},
+					baselineColor: '#cfd2d5',
+				},
+				legend: {position: 'none', alignment: 'center' , orientation: 'vertical'}
+			};
 
-		  var data = google.visualization.arrayToDataTable([
-			['Enfermedad', 'Porcentaje'],
-			['Asma', 13],
-			['No Sabe ',4],
-			['VIH/SIDA', 0.1]
-		  ]);
+			var chart = new google.visualization.BarChart(document.getElementById('chart_salud2'));
 
-		  var options = {
-			title: 'Percepción de Salud',
-			subtitle:'Porcentaje',
-			chartArea: {width: '70%'}
-
-		  };
-
-		  var chart = new google.visualization.BarChart(document.getElementById('chart_salud2'));
-
-		  chart.draw(data, options);
+			chart.draw(data, options);
+		 }, 300);
 		}
 	</script>
 
 	<script type="text/javascript">
-		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBarColors);
-
-		function drawBarColors() {
+		google.charts.load('current', {packages: ['corechart']});
+		// google.charts.setOnLoadCallback(drawBarColors);
+		
+		function drawSANA() {
+			var formatter = new google.visualization.NumberFormat({pattern: '#%'});
 			  var data = google.visualization.arrayToDataTable([
 				['Grupo', 'Agosto 2018 - OCHA', 'Octubre 2019 iMMAP'],
-				['Cereales', 82, 94],
-				['Legumbres', 21, 57],
-				['Azucares', 66, 51],
-				['Carnes', 32, 49],
-				['Frutas', 32, 36],
-				['Vegetales', 23, 32],
-				['Huevos', 32, 32],
-				['Lacteos', 21, 25]
-				
+				['Cereales', 0.82, 0.94],
+				['Legumbres', 0.21, 0.57],
+				['Azucares', 0.66, 0.51],
+				['Carnes', 0.32, 0.49],
+				['Frutas', 0.32, 0.36],
+				['Vegetales', 0.23, 0.32],
+				['Huevos', 0.32, 0.32],
+				['Lacteos', 0.21, 0.25]
 			  ]);
+			formatter.format(data, 1);
+			formatter.format(data, 2);
 
       var options = {
-        title: 'Consumo de Grupos Alimentarios',
-        chartArea: {width: '50%'},
-        //colors: ['#b0120a', '#ffab91'],
-        hAxis: {
-          title: '',
-          minValue: 0
-        },
-        vAxis: {
-          title: ''
-        }
-      };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_san1'));
-      chart.draw(data, options);
+		title: 'Consumo de Grupos Alimentarios',
+		vAxis: {
+			textStyle: {
+				bold: false,
+				color: '#9ba7ad',
+				fontSize: 11
+			},
+			baselineColor: '#cfd2d5',
+		},
+		hAxis: {
+			format: 'percent',
+			viewWindow: {
+				min: 0,
+				max: 1
+			},
+			textStyle: {
+				bold: true,
+				color: '#9ba7ad'
+			},
+			baselineColor: '#cfd2d5',
+		},
+		legend: {position: 'bottom', alignment: 'center' , orientation: 'vertical'}
+	  };
+	  setTimeout(function(){ 
+		var chart = new google.visualization.BarChart(document.getElementById('chart_san1'));
+      	chart.draw(data, options);
+		}, 300);
     }
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBasic);
+		// google.charts.setOnLoadCallback(drawBasic);
 
-	function drawBasic() {
+	function drawSANB() {
 
 		  var data = google.visualization.arrayToDataTable([
 			['Número de Grupos', 'Porcentaje'],
-			['1', 13],
-			['2 ',21],
-			['3', 18],
-			['4', 14],
-			['5 ',12],
-			['6', 7],
-			['7',6],
-			['8', 8]
+			['1', 0.13],
+			['2 ',0.21],
+			['3', 0.18],
+			['4', 0.14],
+			['5 ',0.12],
+			['6', 0.07],
+			['7',0.06],
+			['8', 0.08]
 		  ]);
+		  var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			formatter.format(data, 1);
 
 		  var options = {
 			title: 'Cantidad de grupos alimentarios consumidos por caminante',
-			subtitle:'Porcentaje',
-			chartArea: {width: '70%'}
-
+			vAxis: {
+			textStyle: {
+				bold: false,
+				color: '#9ba7ad',
+				fontSize: 11
+			},
+			baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				format: 'percent',
+				viewWindow: {
+					min: 0,
+					max: 0.3
+				},
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'none', alignment: 'center' , orientation: 'vertical'}
 		  };
 
-		  var chart = new google.visualization.BarChart(document.getElementById('chart_san2'));
-
-		  chart.draw(data, options);
+		  setTimeout(function(){ 
+			var chart = new google.visualization.BarChart(document.getElementById('chart_san2'));
+			chart.draw(data, options);
+			}, 300);
 		}
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBarColors);
+		// google.charts.setOnLoadCallback(drawBarColors);
 
-		function drawBarColors() {
+		function drawSANC() {
 			  var data = google.visualization.arrayToDataTable([
 				['Veces', 'Hombre', 'Mujer'],
-				['Entre 1 y 2', 29, 33],
-				['Entre 3 y 4', 30, 26],
-				['Entre 5 y 7', 11, 13],
+				['Entre 1 y 2', 0.29, 0.33],
+				['Entre 3 y 4', 0.30, 0.26],
+				['Entre 5 y 7', 0.11, 0.13],
 				['Ninguna', 0, 0]
 			  ]);
+			  var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			formatter.format(data, 1);
+			formatter.format(data, 2);
 
       var options = {
         title: '¿Cúantas veces a la semana desayuna?',
-        chartArea: {width: '50%'},
-        //colors: ['#b0120a', '#ffab91'],
-        hAxis: {
-          title: '',
-          minValue: 0
-        },
         vAxis: {
-          title: ''
-        }
-      };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_san3'));
-      chart.draw(data, options);
+			textStyle: {
+				bold: false,
+				color: '#9ba7ad',
+				fontSize: 11
+			},
+			baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				format: 'percent',
+				viewWindow: {
+					min: 0,
+					max: 0.4
+				},
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'bottom', alignment: 'center' , orientation: 'vertical'}
+	  };
+	  setTimeout(function(){ 
+			var chart = new google.visualization.BarChart(document.getElementById('chart_san3'));
+			chart.draw(data, options);
+			}, 300);
     }
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawBarColors);
+		// google.charts.setOnLoadCallback(drawBarColors);
 
-		function drawBarColors() {
+		function drawSAND() {
 			  var data = google.visualization.arrayToDataTable([
 				['Veces', 'Hombre', 'Mujer'],
-				['Entre 1 y 2', 29, 26],
-				['Entre 3 y 4', 29, 31],
-				['Entre 5 y 7', 29, 32],
-				['Ninguna', 0, 1]
+				['Entre 1 y 2', 0.29, 0.26],
+				['Entre 3 y 4', 0.29, 0.31],
+				['Entre 5 y 7', 0.29, 0.32],
+				['Ninguna', 0, 0.01]
 			  ]);
+			  var formatter = new google.visualization.NumberFormat({pattern: '#%'});
+			formatter.format(data, 1);
+			formatter.format(data, 2);
 
       var options = {
         title: '¿Cúantas veces a la semana cena?',
-        chartArea: {width: '50%'},
-        //colors: ['#b0120a', '#ffab91'],
-        hAxis: {
-          title: '',
-          minValue: 0
-        },
         vAxis: {
-          title: ''
-        }
-      };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_san4'));
-      chart.draw(data, options);
+			textStyle: {
+				bold: false,
+				color: '#9ba7ad',
+				fontSize: 11
+			},
+			baselineColor: '#cfd2d5',
+			},
+			hAxis: {
+				format: 'percent',
+				viewWindow: {
+					min: 0,
+					max: 0.4
+				},
+				textStyle: {
+					bold: true,
+					color: '#9ba7ad'
+				},
+				baselineColor: '#cfd2d5',
+			},
+			legend: {position: 'bottom', alignment: 'center' , orientation: 'vertical'}
+	  };
+	  setTimeout(function(){ 
+			var chart = new google.visualization.BarChart(document.getElementById('chart_san4'));
+			chart.draw(data, options);
+			}, 300);
     }
 	</script>
 
 	<script type="text/javascript">
-		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawMaterial);
+		google.charts.load('current', {packages: ['bar']});
+		// google.charts.setOnLoadCallback(drawMaterial);
 
-		function drawMaterial() {
-			  var data = new google.visualization.DataTable();
-			  data.addColumn('string', 'Elemento Wash');
-			  data.addColumn('number', 'Agosto 2018');
-			  data.addColumn('number', 'Octubre 2019');
+		function drawWash() {
 
-			  data.addRows([
-				['Duchas', 75, 53],
-				['Lavamanos', 56, 49],
-				['Elementos de Higiene', 81, 48],
-				['Baño', 20, 44],
-				['Agua potable', 51, 19]
-			  ]);
+			var data = google.visualization.arrayToDataTable([
+				['Elemento Wash', 'Agosto 2018', 'Octubre 2019'],
+				['Duchas', 0.75, 0.53],
+				['Lavamanos', 0.56, 0.49],
+				['Elementos de Higiene', 0.81, 0.48],
+				['Baño', 0.20, 0.44],
+				['Agua potable', 0.51, 0.19]
+				]);
 
-			  var options = {
-				title: 'Población sin acceso a:',
-				subtitle: 'porcentaje(%)'
-				
-			  };
+				var options = {
+					chart: {
+						title: 'Población no tiene acceso a:',
+						subtitle: '',
+					},
+					bars: 'vertical',
+						vAxis: {
+							title:'Porcentaje',
+							format: 'percent',
+							maxValue: 1,
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad'
+							},
+							baselineColor: '#cfd2d5',
+						},
+						hAxis: {
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad',
+								fontSize: 12
+							},
+							baselineColor: '#cfd2d5',
+						},
+						legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
+					};
 
-			  var materialChart = new google.charts.Bar(document.getElementById('chart_wash'));
-			  materialChart.draw(data, options);
+			  setTimeout(function(){ 
+				var materialChart = new google.charts.Bar(document.getElementById('chart_wash'));
+				  materialChart.draw(data, google.charts.Bar.convertOptions(options));
+				}, 300);
+			  
 			}
 	
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-		google.charts.setOnLoadCallback(drawMaterial);
+		// google.charts.setOnLoadCallback(drawMaterial);
 
-		function drawMaterial() {
-			  var data = new google.visualization.DataTable();
-			  data.addColumn('string', 'Lugar');
-			  data.addColumn('number', 'Agosto 2018');
-			  data.addColumn('number', 'Octubre 2019');
+		function drawSHELTERA() {
 
-			  data.addRows([
-				['Calle', 94, 45],
-				['Arriendo', 5, 22]
-			  ]);
+			var data = google.visualization.arrayToDataTable([
+				['Lugar', 'Agosto 2018', 'Octubre 2019'],
+				['Calle', 0.94, 0.45],
+				['Arriendo', 0.05, 0.22]
+				]);
 
-			  var options = {
-				title: 'Lugar donde Duerme',
-				subtitle: 'porcentaje(%)'
-				
-			  };
+				var options = {
+					chart: {
+						title: 'Lugar donde Duerme',
+						subtitle: '',
+					},
+					bars: 'vertical',
+						vAxis: {
+							title:'Porcentaje',
+							format: 'percent',
+							maxValue: 1,
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad'
+							},
+							baselineColor: '#cfd2d5',
+						},
+						hAxis: {
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad',
+								fontSize: 12
+							},
+							baselineColor: '#cfd2d5',
+						},
+						legend: {position: 'top', alignment: 'start' , orientation: 'vertical',}			
+					};
 
-			  var materialChart = new google.charts.Bar(document.getElementById('chart_shelter1'));
-			  materialChart.draw(data, options);
+			  setTimeout(function(){ 
+				var materialChart = new google.charts.Bar(document.getElementById('chart_shelter1'));
+				  materialChart.draw(data, google.charts.Bar.convertOptions(options));
+				}, 300);
 			}
 	
 	</script>
 
 	<script type="text/javascript">
 		google.charts.load('current', {packages: ['corechart', 'bar']});
-	google.charts.setOnLoadCallback(drawBasic);
+	// google.charts.setOnLoadCallback(drawBasic);
 
-	function drawBasic() {
+	function drawSHELTERB() {
 
-		  var data = google.visualization.arrayToDataTable([
-			['Lugar', 'Porcentaje',],
-			['Calle', 45],
-			['Albergue', 31],
-			['Arriendo', 22],
-			['Lugar de Acogida', 5],
-			['Otro', 5],
-			['Vivienda Propia', 1],
-			['Ns/Nr', 1],
-			['Asentamiento Informal', 1]
-		  ]);
+		var data = google.visualization.arrayToDataTable([
+				['Lugar', 'Porcentaje',],
+					['Calle', 0.45],
+					['Albergue', 0.31],
+					['Arriendo', 0.22],
+					['Lugar de Acogida', 0.05],
+					['Otro', 0.05],
+					['Vivienda Propia', 0.01],
+					['Ns/Nr', 0.01],
+					['Asentamiento Informal', 0.01]
+				]);
 
-		  var options = {
-			title: 'Lugar donde duermen los Caminantes',
-			chartArea: {width: '50%'},
-		  };
+				var options = {
+					chart: {
+						title: 'Lugar donde duermen los Caminantes',
+						subtitle: '',
+					},
+					bars: 'vertical',
+						vAxis: {
+							title:'Porcentaje',
+							format: 'percent',
+							maxValue: 1,
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad'
+							},
+							baselineColor: '#cfd2d5',
+						},
+						hAxis: {
+							textStyle: {
+								bold: true,
+								color: '#9ba7ad',
+								fontSize: 12
+							},
+							baselineColor: '#cfd2d5',
+						},
+						legend: {position: 'none', alignment: 'start' , orientation: 'vertical',}			
+					};
 
-		  var chart = new google.visualization.BarChart(document.getElementById('chart_shelter2'));
-
-		  chart.draw(data, options);
+			  setTimeout(function(){ 
+				var materialChart = new google.charts.Bar(document.getElementById('chart_shelter2'));
+				  materialChart.draw(data, google.charts.Bar.convertOptions(options));
+				}, 300);
 		}
 	</script>
 </body>

@@ -3036,7 +3036,6 @@ a.active {
 	}
 }
 
-
 /*modal*/
 #myImg {
   border-radius: 5px;
@@ -3131,4 +3130,22 @@ a.active {
 
 .tabs_necesidades{
 		font-size: 20px;
+}
+
+.margin-top-15{
+margin-top: 15px;
+}
+
+.bordered-bottom{
+	border-bottom: solid 1px;
+}
+
+.center-block{
+	float: none;
+}
+
+.btn-black{
+	color: #fff;
+	background-color: #000;
+	min-width: unset;
 }
