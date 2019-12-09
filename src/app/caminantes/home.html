@@ -178,6 +178,26 @@
 							<!-- service list of the page end -->
 						</div>
 					</div>
+					<div class="row margin-top-15">
+						<header class="col-xs-12 text-center main-header wow fadeInUp margin-0" data-wow-delay="0.6s">
+							<h2>Destino de los/as migrantes peatonales</h2>
+						</header>
+						<div class="col-xs-12">
+								<div class="card floating-card" style="width: 20rem;">
+										<div class="card-body">
+										  <h4 class="card-title">Otros países</h4>
+										  <p class="card-text">
+											  México: 2<br>
+											España: 1
+											</p>
+										</div>
+									  </div>								
+							<div id="dest_map_A" style="height: 700px;"></div>
+						</div>
+						<div class="col-xs-12">
+							<div id="dest_map_B" style="height: 700px;"></div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- antecedentes end -->
@@ -1084,6 +1104,85 @@
 		}
 		
 	</script>
+	<!-- Mapas-->
+	<script type="text/javascript">
+		google.charts.load('current', {
+		  'packages':['geochart'],
+		  'mapsApiKey': 'AIzaSyBYkKcKvi53c0w4rrX8OokSlRn8Y644HWI'
+		});
+		google.charts.setOnLoadCallback(drawRegionsMap);
+  
+		function drawRegionsMap() {
+		  var data = google.visualization.arrayToDataTable([
+			['País', 'Número de personas'],
+			['Colombia', 764],
+			['Ecuador', 37],
+			['Perú', 35],
+			['Chile', 7],
+			['Mexico', 1],
+			['España', 2]
+		  ]);
+  
+		  var options = {
+			  region:'005',
+			  resolution: 'countries',
+			  colorAxis: {colors: ['#ba3b2e']},
+			  keepAspectRatio: true,
+			  height: 700,
+		  };
+  
+		  var chart = new google.visualization.GeoChart(document.getElementById('dest_map_A'));
+  
+		  chart.draw(data, options);
+		}
+	  </script>
+
+<script type="text/javascript">
+	google.charts.load('current', {
+	  'packages':['geochart'],
+	  'mapsApiKey': 'AIzaSyBYkKcKvi53c0w4rrX8OokSlRn8Y644HWI'
+	});
+	google.charts.setOnLoadCallback(drawColombiaMap);
+
+	function drawColombiaMap() {
+	  var data = google.visualization.arrayToDataTable([
+		['Departamento', 'Total de personas'],
+		["Antioquia",3  ],
+		["Distrito capital de Bogotá",170  ],
+		["Boyacá",3  ],
+		["Cesar",1  ],
+		["Meta",2  ],
+		["Norte de Santander",34  ],
+		["Risaralda",10  ],
+		["Arauca",1  ],
+		["Atlántico",7  ],
+		["Bolívar",2  ],
+		["Boyacá",2  ],
+		["Caldas",3  ],
+		["Cauca",1  ],
+		["La Guajira",2  ],
+		["Magdalena",10  ],
+		["Nariño",14  ],
+		["Quindio",5  ],
+		["Santander",295  ],
+		["Tolima",4  ],
+		["Valle del Cauca",96  ],
+		["Putumayo",2  ],
+		["Huila",4  ]
+	  ]);
+
+	  var options = {
+		  region:'CO',
+		  resolution: 'provinces',
+		  colorAxis: {colors: ['#ba3b2e']},
+		  backgroundColor: '#81d4fa',
+	  };
+
+	  var chart = new google.visualization.GeoChart(document.getElementById('dest_map_B'));
+
+	  chart.draw(data, options);
+	}
+  </script>
 	<!-- Columnas-->	
 	<script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
