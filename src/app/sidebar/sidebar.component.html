@@ -11,10 +11,14 @@
     <ul class="nav responsive-nav">        
         <!-- <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li> -->
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
-            <a  [routerLink]="[menuItem.path]">
+            <a *ngIf="menuItem.class != 'url-immap'" [routerLink]="[menuItem.path]">
                 <i class="{{menuItem.icon}}"></i>
                 <p *ngIf="sidebarVisible">{{menuItem.title}}</p>
             </a>
+            <a *ngIf="menuItem.class == 'url-immap'" [href]="[menuItem.path]" target="_blank">
+                    <i class="{{menuItem.icon}}"></i>
+                    <p *ngIf="sidebarVisible">{{menuItem.title}}</p>
+                </a>
         </li>
         <span (click)="sidebarToggle()" class="btn-toggle-sidebar">
                 <i *ngIf="sidebarVisible" class="pe-7s-angle-left-circle"></i>
