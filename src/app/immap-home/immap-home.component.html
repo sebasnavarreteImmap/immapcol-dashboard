@@ -13,38 +13,65 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <img class="img-responsive" src="../../assets/img/carousel-home/corporate-1.jpg" alt="iMMAP presence">
-                        <div class="carousel-caption">
+                        <div class="carousel-caption" *ngIf='globals.language == "ES"'>
                             <h1>IMMAP <small>Colombia</small></h1>
                             <hr>
-                            <p>iMMAP es una ONG internacional que presta servicios de manejo de información a organizaciones humanitarias y de desarrollo. 
-
+                            <p>iMMAP es una ONG internacional que presta servicios de manejo de información a organizaciones humanitarias y de desarrollo.
                             A través de la gestión de la información, ayudamos a nuestros socios a dirigir la asistencia a las poblaciones más vulnerables del mundo.                                
                             </p>
                         </div>
+                        <div class="carousel-caption" *ngIf='globals.language == "EN"'>
+                                <h1>IMMAP <small>Colombia</small></h1>
+                                <hr>
+                                <p>
+                                    iMMAP is an international not-for-profit organization that provides information management services to humanitarian and development organizations, enabling partners to make informed decisions that ultimately provide high-quality targeted assistance to the world’s most vulnerable populations.</p>
+                                <p>
+                                    We support humanitarian actors to solve operational and strategic challenges. Our pioneering approach facilitates informed and effective emergency preparedness, humanitarian response, and development aid activities by enabling evidence-based decision-making for UN agencies, humanitarian cluster/sector leads, NGOs, and government operations.                               
+                                </p>
+                            </div>
                     </div>
                     <div class="item">
                             <img class="img-responsive" src="../../assets/img/carousel-home/corporate-1.jpg" alt="iMMAP presence">
-                        <div class="carousel-caption">
+                        <div class="carousel-caption" *ngIf='globals.language == "ES"'>
                             <h3>Nuestra Misión</h3>
                             <hr>
                             <p>Aprovechamos el poder de la información para facilitar la toma de decisiones basadas evidencias para mejorar la vida de las personas</p>
                         </div>
+                        <div class="carousel-caption" *ngIf='globals.language == "EN"'>
+                                <h3>Mission</h3>
+                                <hr>
+                                <p>
+                                        iMMAP's mission is to harness the power of information to facilitate evidence-based decisions to improve people’s lives.
+
+                                        iMMAP turns data into information and creates knowledge for decision-makers operating in development contexts, situations of violence, post-disaster, and conflict recovery.
+                                </p>
+                            </div>
                     </div>
                     <div class="item">
                         <img class="img-responsive" src="../../assets/img/carousel-home/corporate-1.jpg" alt="iMMAP presence">
-                        <div class="carousel-caption">
+                        <div class="carousel-caption" *ngIf='globals.language == "ES"'>
                             <h3>Nuestra Visión</h3>
                             <hr>
                             <p>Prevé un mundo en el que nadie sufra por la falta de acceso a información oportuna, relevante y fiable que tenga el poder de transformar vidas</p>
                         </div>
+                        <div class="carousel-caption" *ngIf='globals.language == "EN"'>
+                            <h3>Vission</h3>
+                            <hr>
+                            <p>
+                                iMMAP envisions a world where no one suffers due to a lack of access to timely, relevant and reliable information that has the power to transform lives.
+                            </p>
+                        </div>
                     </div>
                     <div class="item">
-                        <img class="img-responsive" src="../../assets/img/carousel-home/corporate-1.jpg" alt="iMMAP presence">
-                        <div class="carousel-caption">
+                        <img class="img-responsive" src="../../assets/img/carousel-home/corporate-2.jpg" alt="iMMAP presence">
+                        <div class="carousel-caption" *ngIf='globals.language == "ES"'>
                             <h3>Nuestra Filosofía</h3>
                             <hr>
                             <p>Mejores datos, mejores decisiones, mejores resultados</p>
                         </div>
+                        <div class="carousel-caption" *ngIf='globals.language == "EN"'>
+                                <h3>Better Data | Better Decisions | Better Outcomes</h3>
+                            </div>
                     </div>
                 </div>
                 
@@ -61,16 +88,26 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                  <h1>iMMAP INFORMATION MANAGEMENT SUPPORT TO COLOMBIA</h1> 
+                <h1 *ngIf='globals.language == "ES"'>
+                    <span class="txt-red-immap">PROYECTO DE APOYO DE </span> 
+                    <span class="txt-gray-immap">MANEJO DE INFORMACIÓN </span>
+                    <span class="txt-red-immap">EN COLOMBIA</span>
+                </h1>
+                <h1 *ngIf='globals.language == "EN"'>
+                    <span class="txt-red-immap">iMMAP </span>
+                    <span class="txt-gray-immap">INFORMATION MANAGEMENT</span> 
+                    <span class="txt-red-immap"> SUPPORT TO COLOMBIA</span>
+                </h1> 
                   <hr> 
             </div>
             <div class="col-md-6">
-                    <h3>Contexto</h3>  
+                    <h3 class="txt-red-immap" *ngIf='globals.language == "ES"'>Contexto</h3>
+                    <h3 class="txt-red-immap" *ngIf='globals.language == "EN"'>Background</h3>  
                     <hr>
-                    <p class="text-justify">
+                    <p class="text-justify" *ngIf='globals.language == "ES"'>
                         Los primeros indicios de una posible crisis con los migrantes venezolanos
                         se produjeron en  el 2015, con la decisión del Gobierno de Venezuela
-                        de expulsar a una serie de colombianos viviendo en Venezuela cerca del
+                        de expulsar a una serie de colombianos viviendo en Venezuela cerca
                         de la frontera. Este proceso de remoción incluyó la destrucción de muchos hogares colombianos.
                         En 2017 la crisis comenzó a llamar la atención, ya que la situación económica
                         comenzó a deteriorarse. En abril de 2018 fué creada una nueva plataforma regional, liderada por
@@ -80,15 +117,25 @@
                          estima que un total de 4,3 millones de venezolanos han abandonado el país, con mas de 1.4 
                          millones en Colombia,  y con 5.000 venezolanos adicionales huyendo del país diariamente.
                     </p>
+                    <p class="text-justify" *ngIf='globals.language == "EN"'>
+                        The first signs of a possible crisis with Venezuelan migrants came in 2015, with the decision of the Venezuelan Government to expel a number of Colombians living in Venezuela near the border. This removal process included the destruction of many Colombian homes, and in 2017 the crisis began to attract attention as the economic situation began to deteriorate. In April 2018 a new regional platform was created, led by UNHCR and IOM, to coordinate the response to the crisis.
+                        IMMAP obtained funding from OFDA to provide information management support to OCHA, and has since extended its support to UNHCR and IOM. Currently, it is estimates that a total of 4.3 million Venezuelans have left the country, with more than 1.4 million in Colombia, and with an additional 5,000 Venezuelans fleeing the country daily.
+                    </p>
             </div>               
             <div class="col-md-6">
-                    <h3>Objetivo</h3>
+                    <h3 class="txt-red-immap" *ngIf='globals.language == "ES"'>Objetivo</h3>
+                    <h3 class="txt-red-immap" *ngIf='globals.language == "EN"'>Objective</h3>
                     <hr>
-                    <p>Proporcionar productos de gestión de la información y análisis de datos personalizados para el 
+                    <p *ngIf='globals.language == "ES"'>Proporcionar productos de gestión de la información y análisis de datos personalizados para el 
                         seguimiento y la supervisión de la respuesta humanitaria a los principales asociados, con especial 
                         atención a la aportación de capital humano y conocimientos especializados en coordinación con los 
                         sectores de la salud, el agua, el saneamiento y las redes de servicios sanitarios, así como el 
-                        Foro de las organizaciones internacionales no gubernamentales, en coordinación con el GIFMM</p>                    
+                        Foro de las organizaciones internacionales no gubernamentales, en coordinación con el GIFMM
+                    </p>
+                    <p *ngIf='globals.language == "EN"'>To provide information management (IM) products and customized data analysis for 
+                        monitoring and oversight in humanitarian response to key partners, with a special focus on providing human capital 
+                        and expertise in coordination with the Health, WASH and FSN sectors as well as the INGO Forum, in coordination with GIFMM.
+                        </p>                      
             </div> 
         </div>
     </div>

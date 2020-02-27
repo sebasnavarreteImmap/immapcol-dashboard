@@ -1,4 +1,4 @@
-import { Component, OnInit,ElementRef } from '@angular/core';
+import { Component, OnInit,ElementRef, DoCheck } from '@angular/core';
 import {Globals} from '../globals'
 
 declare const $: any;
@@ -8,18 +8,25 @@ declare interface RouteInfo {
     icon: string;
     class: string;
 }
-export const ROUTES: RouteInfo[] = [
+export const ROUTES_ES: RouteInfo[] = [
     { path: '/home', title: 'Inicio',  icon: 'pe-7s-home', class: '' },
     { path: '/fb-dashboard', title: 'Rastreo de usuarios venezolanos en Facebook',  icon: 'pe-7s-graph2', class: '' },
     { path: '/products', title: 'Productos',  icon: 'pe-7s-display1', class: '' },
     { path: 'http://colombia.immap.org/caminantes/home.html', title: 'Caracterización de caminantes',  icon: 'pe-7s-note2', class: 'url-immap' },
 ];
 
+export const ROUTES_EN: RouteInfo[] = [
+  { path: '/home', title: 'Home',  icon: 'pe-7s-home', class: '' },
+  { path: '/fb-dashboard', title: 'Tracking venezuelan users connected to Facebook',  icon: 'pe-7s-graph2', class: '' },
+  { path: '/products', title: 'Deliverables',  icon: 'pe-7s-display1', class: '' },
+  { path: 'http://colombia.immap.org/caminantes/home.html', title: 'Needs assesment of venezuelan refugees and migrants',  icon: 'pe-7s-note2', class: 'url-immap' },
+];
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html'
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, DoCheck {
   menuItems: any[];
   private sidebar: any;
   private sidebar_wrapper: any;
@@ -29,11 +36,21 @@ export class SidebarComponent implements OnInit {
   constructor(private element: ElementRef, public globals: Globals) { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    this.menuItems = ROUTES_ES.filter(menuItem => menuItem);   
     this.sidebar  = document.getElementsByClassName('sidebar')[0];
     this.sidebar_wrapper = document.getElementsByClassName('sidebar-wrapper')[0];
     this.mainpanel = document.getElementsByClassName('main-panel')[0];
     this.sidebarVisible = true;
+  }
+  
+  ngDoCheck(): void {
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
+    if (this.globals.language == 'ES') {
+        this.menuItems = ROUTES_ES.filter(menuItem => menuItem);
+    }else{
+        this.menuItems = ROUTES_EN.filter(menuItem => menuItem);
+    }
   }
 
   sidebarOpen() {
