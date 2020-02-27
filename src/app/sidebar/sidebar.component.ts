@@ -11,7 +11,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/home', title: 'Inicio',  icon: 'pe-7s-home', class: '' },
     { path: '/fb-dashboard', title: 'Rastreo de usuarios venezolanos en Facebook',  icon: 'pe-7s-graph2', class: '' },
     { path: '/products', title: 'Productos',  icon: 'pe-7s-display1', class: '' },
-    { path: '/caminantes', title: 'Caracterización de caminantes',  icon: 'pe-7s-note2', class: '' },
+    { path: 'http://colombia.immap.org/caminantes/home.html', title: 'Caracterización de caminantes',  icon: 'pe-7s-note2', class: '' },
 ];
 
 @Component({
