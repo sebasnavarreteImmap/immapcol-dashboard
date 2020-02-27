@@ -3,9 +3,14 @@
         <div class="row nomargin">
             <div class="immap-fb-grid">
                 <div class="col-md-12 center-block-v2 nopadding">
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <div *ngIf="globals.language == 'ES'" class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
-                                src="https://app.powerbi.com/view?r=eyJrIjoiZGExYWM3NzItMTI4YS00YTUzLWE5OGItOGQwMjJhMmFiMGM3IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9">
+                                src="https://app.powerbi.com/view?r=eyJrIjoiYTk5Y2VhMTItMWE4NC00NWY4LTg2MjMtYjMzNDU3NDlkMjY2IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9">
+                        </iframe>
+                    </div>
+                    <div *ngIf="globals.language == 'EN'" class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiYTk5Y2VhMTItMWE4NC00NWY4LTg2MjMtYjMzNDU3NDlkMjY2IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9">
                         </iframe>
                     </div>
                 </div>

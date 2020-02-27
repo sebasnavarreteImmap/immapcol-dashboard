@@ -15,6 +15,8 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { GtagModule } from 'angular-gtag';
 
+import { Globals } from './globals';
+
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -31,7 +33,7 @@ import { GtagModule } from 'angular-gtag';
     AppComponent,
     AdminLayoutComponent,
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

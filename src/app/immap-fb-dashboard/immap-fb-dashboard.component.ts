@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Gtag } from 'angular-gtag';
+import {Globals} from '../globals'
 
 @Component({
   selector: 'app-immap-fb-dashboard',
@@ -8,7 +9,8 @@ import { Gtag } from 'angular-gtag';
 })
 export class ImmapFbDashboardComponent implements OnInit {
 
-  constructor(gtag: Gtag) { }
+  constructor(gtag: Gtag, public globals: Globals) {
+  }
 
   ngOnInit() {
   }

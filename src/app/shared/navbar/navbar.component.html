@@ -9,11 +9,23 @@
             </button>
             <a class="navbar-brand" href="#" >{{getTitle()}}</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse justify-content-end">
             <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="mailto:contacto@immap.org">contacto@immap.org</a>
-                    </li>
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <p>
+                                    <i class="pe-7s-global"></i> | <span *ngIf='globals.language=="ES"'>ES</span><span *ngIf='globals.language=="EN"'>EN</span>
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a (click)="changedLan('ES')" href="javascript:void(0)">ES</a></li>
+                                <li><a (click)="changedLan('EN')" href="javascript:void(0)">EN</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                                <a href="mailto:contacto@immap.org">contacto@immap.org</a>
+                            </li>
             </ul>            
         </div>
     </div>

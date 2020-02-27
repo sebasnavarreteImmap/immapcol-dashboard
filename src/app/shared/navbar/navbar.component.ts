@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {Globals} from '../../globals'
 
 @Component({
     // moduleId: module.id,
@@ -13,10 +14,12 @@ export class NavbarComponent implements OnInit{
     location: Location;
     private toggleButton: any;
     private sidebarVisible: boolean;
+    globals:Globals;
 
-    constructor(location: Location,  private element: ElementRef) {
+    constructor(location: Location,  private element: ElementRef, globals: Globals) {
         this.location = location;
-          this.sidebarVisible = false;
+        this.sidebarVisible = false;
+        this.globals = globals;
     }
 
     ngOnInit(){
@@ -66,4 +69,8 @@ export class NavbarComponent implements OnInit{
       }
       return 'Dashboard';
     }
+
+    private changedLan(lan:string) {
+        this.globals.language = lan;
+      }
 }
