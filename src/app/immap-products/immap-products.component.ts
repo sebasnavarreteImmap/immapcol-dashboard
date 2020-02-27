@@ -4,6 +4,7 @@ import { zoomIn, zoomOut } from 'ngx-animate';
 
 import { products } from '../../assets/products';
 import { Gtag } from 'angular-gtag';
+import {Globals} from '../globals'
 
 @Component({
   selector: 'app-immap-products',
@@ -24,7 +25,7 @@ export class ImmapProductsComponent implements OnInit, AfterViewInit {
   zoomIn:any;
   zoomOut:any;
 
-  constructor(gtag: Gtag) { }
+  constructor(gtag: Gtag, public globals: Globals) { }
 
   ngOnInit() {
   }

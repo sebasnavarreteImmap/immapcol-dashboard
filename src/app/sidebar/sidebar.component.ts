@@ -1,4 +1,5 @@
 import { Component, OnInit,ElementRef } from '@angular/core';
+import {Globals} from '../globals'
 
 declare const $: any;
 declare interface RouteInfo {
@@ -25,7 +26,7 @@ export class SidebarComponent implements OnInit {
   private mainpanel: any;
   public sidebarVisible: boolean;
 
-  constructor(private element: ElementRef) { }
+  constructor(private element: ElementRef, public globals: Globals) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
