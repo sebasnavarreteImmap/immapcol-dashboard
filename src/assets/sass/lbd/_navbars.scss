@@ -10,6 +10,19 @@
     border: $none;
     font-size: $font-size-navbar;
     border-radius: 0;
+
+    .logo-img{
+        width: 40px;
+        display: inline-block;
+        max-height: 40px;
+        margin-right: 10px;
+
+        img{
+            width: 40px;
+            top: 11px;
+            position: absolute;
+        }
+    }
     
     .navbar-brand {
         font-weight: $font-weight-normal;
