@@ -13,6 +13,7 @@ export const ROUTES_ES: RouteInfo[] = [
     { path: '/fb-dashboard', title: 'Rastreo de usuarios venezolanos en Facebook',  icon: 'pe-7s-graph2', class: '' },
     { path: '/products', title: 'Productos',  icon: 'pe-7s-display1', class: '' },
     { path: 'http://colombia.immap.org/caminantes/home.html', title: 'Caracterización de caminantes',  icon: 'pe-7s-note2', class: 'url-immap' },
+    { path: '/sources', title: 'Fuentes',  icon: 'pe-7s-folder', class: '' },
 ];
 
 export const ROUTES_EN: RouteInfo[] = [
@@ -20,6 +21,7 @@ export const ROUTES_EN: RouteInfo[] = [
   { path: '/fb-dashboard', title: 'Tracking venezuelan users connected to Facebook',  icon: 'pe-7s-graph2', class: '' },
   { path: '/products', title: 'Deliverables',  icon: 'pe-7s-display1', class: '' },
   { path: 'http://colombia.immap.org/caminantes/home.html', title: 'Needs assesment of venezuelan refugees and migrants',  icon: 'pe-7s-note2', class: 'url-immap' },
+  { path: '/sources', title: 'Sources',  icon: 'pe-7s-folder', class: '' },
 ];
 
 @Component({

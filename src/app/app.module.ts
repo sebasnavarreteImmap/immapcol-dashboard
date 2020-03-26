@@ -27,7 +27,7 @@ import { Globals } from './globals';
     FooterModule,
     SidebarModule,
     AppRoutingModule,
-    GtagModule.forRoot({ trackingId: 'UA-150766517-1', trackPageviews: true })
+    GtagModule.forRoot({ trackingId: 'UA-150766517-1', trackPageviews: true }),
   ],
   declarations: [
     AppComponent,
